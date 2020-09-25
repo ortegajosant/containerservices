@@ -8,6 +8,7 @@
 
 #define PORT 8080
 
+// Run the server that manage the connection
 int run_server()
 {
     int server_fd, new_socket, valread;

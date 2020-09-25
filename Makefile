@@ -11,6 +11,12 @@ server: server.o
 server.o: server.c
 	gcc -c server.c
 
+#Execute client
+sendimg:
+	make client
+	make clean
+	./client
+	
 # Compile client
 client: client.o
 	gcc -o client client.o

@@ -32,6 +32,7 @@ void abort_(const char *s, ...)
     abort();
 }
 
+// Read the file sent from client
 void read_png_file(char *buffer, int filelen)
 {
     char header[8]; // 8 is the maximum size that can be checked
@@ -83,6 +84,7 @@ void read_png_file(char *buffer, int filelen)
     fclose(fp);
 }
 
+// Write the file in the valid directory after processing process
 void write_png_file(char *file_name)
 {
     /* create file */
@@ -132,6 +134,7 @@ void write_png_file(char *file_name)
     fclose(fp);
 }
 
+// This method process the PNG file that is sent from the client
 int process_file(void)
 {
     int jump_code = 0;
@@ -187,6 +190,7 @@ int process_file(void)
     }
 }
 
+// This method execute the detection color
 int detect_color(char *buffer, int filelen)
 {
     read_png_file(buffer, filelen);

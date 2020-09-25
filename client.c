@@ -9,6 +9,7 @@
 
 char *buffer;
 
+// Read the file from the local machine
 long read_file(char *file_name)
 {
     FILE *fp;
@@ -24,6 +25,7 @@ long read_file(char *file_name)
     return filelen;
 }
 
+// Start client socket that use
 int run_client(const char * ip[])
 {
 
