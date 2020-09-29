@@ -16,7 +16,10 @@ sendimg:
 	make client
 	make clean
 	./client
-	
+
+containerun:
+	docker run -it -p 127.0.0.1:6000:8080 container
+
 # Compile client
 client: client.o
 	gcc -o client client.o
